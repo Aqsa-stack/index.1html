@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        form {
+            background-color: hsl(207, 99%, 50%);
+            color: white;
+            padding: 50px;
+            margin: auto;
+            width: 800px;
+            border: 2px solid black;
+        }
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid white;
+            padding: 5px;
+            text-align: center;
+        }
+        input, select, textarea {
+            margin: 5px;
+            padding: 5px;
+        }
+        h2 {
+            text-decoration: underline;
+            color: #4B0082;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>STUDENT REGISTRATION FORM</h2>
+
+    <form>
+    
+        FIRST NAME: <input type="text" name="firstname" maxlength="30"> <br><br>
+        LAST NAME: <input type="text" name="lastname" maxlength="30"> <br><br>
+
+        
+        DATE OF BIRTH: 
+        <select name="day">
+            <option>Day</option>
+         
+            <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write("<option>" + i + "</option>");
+                }
+            </script>
+        </select>
+        <select name="month">
+            <option>Month</option>
+            <option>Jan</option><option>Feb</option><option>Mar</option>
+            <option>Apr</option><option>May</option><option>Jun</option>
+            <option>Jul</option><option>Aug</option><option>Sep</option>
+            <option>Oct</option><option>Nov</option><option>Dec</option>
+        </select>
+        <select name="year">
+            <option>Year</option>
+            <script>
+                for (let i = 2025; i >= 1950; i--) {
+                    document.write("<option>" + i + "</option>");
+                }
+            </script>
+        </select>
+        <br><br>
+
+   
+        EMAIL ID: <input type="email" name="email"><br><br>
+        MOBILE NUMBER: <input type="text" name="mobile" maxlength="10"> <br><br>
+
+       
+        GENDER:
+        Male <input type="radio" name="gender" value="male">
+        Female <input type="radio" name="gender" value="female">
+        <br><br>
+
+        ADDRESS:<br>
+        <textarea name="address" rows="4" cols="40"></textarea><br><br>
+
+        CITY: <input type="text" name="city" maxlength="30"> <br><br>
+        PIN CODE: <input type="text" name="pincode" maxlength="6"> <br><br>
+        STATE: <input type="text" name="state" maxlength="30"><br><br>
+        COUNTRY: <input type="text" name="country"><br><br>
+
+        HOBBIES:<br>
+        Drawing <input type="checkbox" name="hobby" value="drawing">
+        Singing <input type="checkbox" name="hobby" value="singing">
+        Dancing <input type="checkbox" name="hobby" value="dancing">
+        Sketching <input type="checkbox" name="hobby" value="sketching">
+        Others <input type="checkbox" name="hobby" value="others">
+        <input type="text" name="otherhobby"><br><br>
+
+        <b>QUALIFICATION</b>
+        <table>
+            <tr>
+                <th>Sl.No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="board1" maxlength="10"></td>
+                <td><input type="text" name="percent1" maxlength="5"></td>
+                <td><input type="text" name="year1" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="board2" maxlength="10"></td>
+                <td><input type="text" name="percent2" maxlength="5"></td>
+                <td><input type="text" name="year2" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="board3" maxlength="10"></td>
+                <td><input type="text" name="percent3" maxlength="5"></td>
+                <td><input type="text" name="year3" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board4" maxlength="10"></td>
+                <td><input type="text" name="percent4" maxlength="5"></td>
+                <td><input type="text" name="year4" maxlength="4"></td>
+            </tr>
+        </table><br>
+
+        COURSES APPLIED FOR:<br>
+        BCA <input type="radio" name="course" value="BCA">
+        B.Com <input type="radio" name="course" value="BCom">
+        B.Sc <input type="radio" name="course" value="BSc">
+        B.A <input type="radio" name="course" value="BA"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
